@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Modelo - Portfólio / Empresa</title>
+  <meta name="description" content="Site modelo inspirado nas referências fornecidas." />
+  <style>
+    :root{--accent:#ff3366;--bg:#0f0f10;--card:#111214;--muted:#9aa0a6}
+    *{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:#e9eef2;background:linear-gradient(180deg,#060607 0%, #0f0f10 100%)}
+    a{color:var(--accent);text-decoration:none}
+    header{position:fixed;left:0;right:0;top:0;z-index:40;backdrop-filter:blur(6px);background:rgba(0,0,0,0.35);border-bottom:1px solid rgba(255,255,255,0.03)}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;height:68px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#9b2dff);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+    nav ul{display:flex;gap:18px;align-items:center;list-style:none;margin:0;padding:0}
+    .cta{padding:10px 14px;border-radius:9px;background:linear-gradient(90deg,var(--accent),#ff7aa9);color:white;font-weight:600}
+
+    /* Hero */
+    .hero{min-height:70vh;display:grid;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center}
+    .hero h1{font-size:36px;margin:0 0 14px;line-height:1.03}
+    .lead{color:var(--muted);margin-bottom:18px}
+    .buttons{display:flex;gap:12px}
+    .big-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .gallery img{width:100%;height:180px;object-fit:cover;border-radius:10px;cursor:pointer}
+
+    /* Sections */
+    section{padding:64px 0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+
+    /* Services */
+    .services{display:flex;gap:18px;flex-wrap:wrap}
+    .service{background:var(--card);padding:18px;border-radius:12px;flex:1 1 220px}
+
+    /* Contact */
+    .contact-form{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+    input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e9eef2}
+    textarea{min-height:120px}
+
+    footer{padding:28px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:960px){
+      .hero-grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      nav ul{display:none}
+    }
+    @media (max-width:520px){
+      .gallery img{height:120px}
+    }
+
+    /* Small utility */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600}
+
+    /* Efeitos de entrada suave */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Destaque no menu ativo */
+nav ul li a.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">RC</div>
+        <div>
+          <div style="font-weight:700">Seu Nome</div>
+          <div class="muted" style="font-size:12px">Agência • Produto • Profissional</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#gal">Galeria</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a class="cta" href="#contact">Solicitar Orçamento</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top:86px">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill">Serviço em destaque</div>
+          <h1>Criação de sites, branding e presença digital que converte</h1>
+          <p class="lead">Site one-page moderno inspirado no modelo enviado. Layout responsivo, galeria, formulário de contato e área para depoimentos.</p>
+          <div class="buttons">
+            <a class="cta" href="#contact">Começar</a>
+            <a style="padding:10px 14px;border-radius:9px;background:transparent;border:1px solid rgba(255,255,255,0.04;color:var(--muted);" href="#about">Ver mais</a>
+          </div>
+          <div style="margin-top:22px;display:flex;gap:12px;align-items:center">
+            <div class="big-card">
+              <strong>Portfólio</strong>
+              <div class="muted" style="font-size:13px;margin-top:6px">Projetos entregues: <strong>24</strong></div>
+            </div>
+            <div class="big-card">
+              <strong>Atendimento</strong>
+              <div class="muted" style="font-size:13px;margin-top:6px">Prazo médio: <strong>7 dias úteis</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="big-card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Mockup" style="width:100%;border-radius:8px;display:block;margin-bottom:12px"/>
+            <div style="display:flex;gap:10px;align-items:center">
+              <div style="flex:1">
+                <div style="font-weight:700">Agende uma conversa</div>
+                <div class="muted" style="font-size:13px">Sem compromisso • 15 minutos</div>
+              </div>
+              <a class="cta" href="#contact">Agendar</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <h2>Sobre nós</h2>
+            <p class="muted">Somos uma equipe dedicada a oferecer os melhores produtos com qualidade e preço justo.</p>
+            <ul style="margin-top:12px;color:var(--muted)">
+              <li>Design responsivo</li>
+              <li>Desenvolvimento front-end</li>
+              <li>SEO básico e performance</li>
+            </ul>
+          </div>
+          <div>
+            <div class="services">
+              <div class="service"><strong>Criação de Sites</strong><div class="muted" style="margin-top:8px">teste.</div></div>
+              <div class="service"><strong>Branding</strong><div class="muted" style="margin-top:8px">teste.</div></div>
+              <div class="service"><strong>Consultoria</strong><div class="muted" style="margin-top:8px">teste.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gal">
+      <div class="container">
+        <h2>Galeria</h2>
+        <p class="muted">Alguns projetos recentes. Clique para ampliar.</p>
+        <div style="margin-top:16px" class="gallery" id="gallery">
+          <img src="https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="1"/>
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="2"/>
+          <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="3"/>
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="4"/>
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="5"/>
+          <img src="https://images.unsplash.com/photo-1505238680356-667803448bb6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="6"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contato</h2>
+        <div class="grid-2">
+          <div>
+            <p class="muted">teste.</p>
+            <div style="margin-top:16px" class="big-card">
+              <strong>Dados</strong>
+              <div class="muted" style="margin-top:8px">Email: contato@.com<br/>Telefone/WhatsApp: (19) 9XXXX-XXXX</div>
+            </div>
+          </div>
+          <div>
+            <form class="contact-form" onsubmit="submitForm(event)">
+              <label>Nome</label>
+              <input id="name" required placeholder="Seu nome" />
+              <label>Email</label>
+              <input id="email" type="email" required placeholder="seu@email.com" />
+              <label>Mensagem</label>
+              <textarea id="message" required placeholder="O que você deseja?"></textarea>
+              <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+                <button type="submit" class="cta">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
+      <div>© <strong>teste</strong> — Todos os direitos reservados</div>
+      <div class="muted">Desenvolvidor cerejo.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const href=a.getAttribute('href');
+        if(href.startsWith('#')){
+          e.preventDefault();
+          const el=document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    });
+
+    // Simple gallery lightbox
+    const gallery=document.getElementById('gallery');
+    gallery && gallery.addEventListener('click',e=>{
+      const img=e.target.closest('img');
+      if(!img) return;
+      const overlay=document.createElement('div');
+      overlay.style.position='fixed';overlay.style.inset=0;overlay.style.background='rgba(0,0,0,0.85)';overlay.style.display='flex';overlay.style.alignItems='center';overlay.style.justifyContent='center';overlay.style.zIndex=9999;
+      const big=document.createElement('img');big.src=img.src;big.style.maxWidth='90%';big.style.maxHeight='90%';big.style.borderRadius='8px';
+      overlay.appendChild(big);
+      overlay.addEventListener('click',()=>document.body.removeChild(overlay));
+      document.body.appendChild(overlay);
+    });
+
+    function submitForm(e){
+      e.preventDefault();
+      const n=document.getElementById('name').value;
+      const em=document.getElementById('email').value;
+      const msg=document.getElementById('message').value;
+      // fallback: open mailto (replace with AJAX/backend when available)
+      const subject=encodeURIComponent('Contato via Site - '+n);
+      const body=encodeURIComponent(msg+'\n\nContato: '+n+' | '+em);
+      window.location.href = `mailto:contato@seudominio.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
